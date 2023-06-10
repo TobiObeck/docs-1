@@ -85,10 +85,12 @@ const config = {
           remarkPlugins: [a11yEmoji],
         },
         blog: {
-          blogTitle: 'Stately Blog',
+          blogTitle: 'Stately Blog',          
           blogDescription: 'Stately’s engineering blog',
           blogSidebarCount: 0,
           postsPerPage: 'ALL',
+          editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+            `https://github.com/statelyai/docs/edit/main/${blogDirPath}/${blogPath}`
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
